@@ -1,3 +1,6 @@
+Documentation on Milestone 1
+
+Steps on how to successful deploy the app with tweets content, author, date and time:  
 1.	Use AWS Cloud9 for the project. 
 2.	Download flask using [sudo pip install flask] and download tweepy using [sudo pip install tweepy] in AWS Cloud9.  
 3.	Apply for Twitter developer’s account using the NJIT email address to access Twitter APIs.

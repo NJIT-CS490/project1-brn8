@@ -7,5 +7,5 @@
 7.	Use attributes (text, screen_name, created_at) to generate tweet contents, author, date, and time.   
 8.	Create an HTML file to deploy a web application to show information about related quotes.
 9.	Link CSS file to HTML to design the web application.
-10.	After the completion, use. gitignore to hide API keys.
+10.	After the completion, use .gitignore to hide API keys.
 11.	At last, create a private repository on Github in the CS490 ORGANIZATION and commit all the codes in that repository. 

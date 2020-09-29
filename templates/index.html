@@ -10,6 +10,11 @@
     <div class="absolute" >
         <p>
         <b>Serving: </b>{{serving}} <br><b>Prep time: </b>{{prep_time}} Minutes
+        <b><br>Ingredients:</b></br>
+        {%for i in range(0, len)%} 
+        <li>{{lst_ingredients[i]}}</li>
+        {%endfor%} 
+        <br><b>Link: <b></br><a class="links" href="{{food_link}}">Clink the link for more information about {{food_title}}</a>
         </p>
     </div>
     <div class="fixed"><i>"{{result}}"</i> <b>~ @{{screen_name}}</b><br><b>{{date_time}}</b></br></div>

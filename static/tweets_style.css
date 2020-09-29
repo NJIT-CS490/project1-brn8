@@ -6,7 +6,7 @@ h1{
     font-family: Times;
     font-size: 100px;
 }
-p{
+div{
     margin: auto;
     width: 70%;
     border: 10px dotted gray;
@@ -16,4 +16,22 @@ p{
     font-size: 50px;
     text-align: center;
 }
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  left: 50px;
+  margin: auto;
+  width: 70%;
+  border: 10px dotted gray;
+  padding: 20px;
+  
+} 
+
+.relative {
+  position: relative;
+  width: auto;
+  height: auto;
+} 
+
 

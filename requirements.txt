@@ -6,4 +6,5 @@
 tweepy
 Flask
 python-dotenv
+requests
 

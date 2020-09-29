@@ -28,7 +28,7 @@ auth_api = tweepy.API(auth)
 
 @app.route('/') # Python decorator 
 def index():
-    list_item=["Samosas","Gulab Jamun","Gajar Ka Halwa","Falafel", "Lassi", "Cake","Ice Cream"]
+    list_item=["Samosas","Gulab Jamun","Gajar Ka Halwa","Falafel", "Lassi", "Cake","Ice Cream","Tomato Soup","Bagel"]
     keyword=random.choice(list_item)
     response = requests.get(
     "https://api.spoonacular.com/recipes/search?query=" + keyword +

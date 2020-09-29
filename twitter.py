@@ -37,6 +37,8 @@ def index():
     title=(json.dumps(json_body['results'][0]["title"], indent=2))
     food_title=title.replace('"','')
     item_id=(json.dumps(json_body['results'][0]["id"], indent=2))
+    serving=(json.dumps(json_body['results'][0]["servings"], indent=2))
+    prep_time=(json.dumps(json_body['results'][0]["readyInMinutes"], indent=2))
     tweets = auth_api.search(q=keyword, lang="en", tweet_mode='extended')
     for tweet in tweets:
         result=(tweet.full_text)
@@ -51,6 +53,8 @@ def index():
         date_time=date_time,
         food_title=food_title,
         item_id=item_id,
+        serving=serving,
+        prep_time=prep_time
         ) 
   
 app.run(

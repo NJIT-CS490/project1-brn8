@@ -1,4 +1,4 @@
-Documentation on Milestone 1
+--> Documentation on Milestone 1
 
 
 Steps on how to successful deploy the app with tweets content, author, date and time:  
@@ -26,7 +26,8 @@ Issues that are still exist:
 
 
 
-Documentation on Milestone 2 
+--> Documentation on Milestone 2 
+
 Steps on how to deploy the app with recipe content that includes serving size, prep time, ingredients, link, and image for a given items
 1.	Download json 
 2.	Sign up for Spoonacular to obtain the API key to fetch data related to the food item. 

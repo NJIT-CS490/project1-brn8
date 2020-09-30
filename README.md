@@ -46,3 +46,8 @@ Technical issues:
 1.	I was having a hard time pushing the code from master into Heroku, and I was getting an error every time I do so. After looking over the slack chat (#project 1 ), I found out that I have forgotten to push the Procfile and requirements.txt file, and that’s why the error was coming up in my case. 
 2.	I was getting an authentication problem every time I tried to fetch specific content. After looking over the spoonacular website, I found the correct way to write the authentication part, and I was able to tackle the issue with the help of a spoonacular resources. 
 
+Issue that are still exist:
+
+1.	As per branching and merging the code, I had a problem pushing ONLY one file at the end, and still, I wasn’t able to push the file. Therefore, I have manually added little changes to the CSS file. In this matter, if I had more time, I would have taken the assist from the TA.  
+  
+

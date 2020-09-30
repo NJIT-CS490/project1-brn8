@@ -4,7 +4,7 @@ body{
 h1{
     text-align: center;
     font-family: Times;
-    font-size: 60px;
+    font-size: 40px;
 }
 img {
   border-radius: 25px;
@@ -13,13 +13,13 @@ img {
 a{
     text-align: auto;
     font-family: Times;
-    font-size: 30px;
+    font-size: 15px;
     margin-bottom: 120px;
     margin-top: 100px;
 }
 
 div {
-  padding: 50px;
+  padding: 20px;
   
 }
 
@@ -34,7 +34,7 @@ div {
   padding: 20px;
   background: white;
   font-family: times;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
   border-radius: 25px;
   
@@ -42,13 +42,13 @@ div {
 
 .absolute {
   position: absolute;
-  top: 155px;
-  left: 1400px;
+  top: 80px;
+  left: 600px;
   width: auto;
   height: auto;
-  font-size: 30px;
+  font-size: 15px;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .relative {

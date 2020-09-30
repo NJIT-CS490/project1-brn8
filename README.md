@@ -27,7 +27,7 @@ Issues that are still exist:
 
 
 Documentation on Milestone 2 
-Steps on how to deploy the app with recipe content that includes serving size, prep time, ingredients, link, and image for a given item. 
+Steps on how to deploy the app with recipe content that includes serving size, prep time, ingredients, link, and image for a given items
 1.	Download json 
 2.	Sign up for Spoonacular to obtain the API key to fetch data related to the food item. 
 3.	Use each API function with the API key to get specific content. 

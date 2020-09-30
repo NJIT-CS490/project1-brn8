@@ -40,7 +40,7 @@ Steps on how to deploy the app with recipe content that includes serving size, p
 9.	Download npm install -g heroku 
 10.	Connect to the Heroku account from the terminal and then push all the files to the Heroku including Procfile and requirements.txt file. 
 11.	Add all the API keys to the Heroku account by going to the app you just made now and clink setting where there is an option of Config Vars to add your API keys. 
-12.	Lastly, you have done everything to deploy a web app that shows information about the favorite recipes and related quotes. 
+12.	Lastly, have done everything to deploy a web app that shows information about the favorite recipes and related quotes. 
 
 Technical issues:
 1.	I was having a hard time pushing the code from master into Heroku, and I was getting an error every time I do so. After looking over the slack chat (#project 1 ), I found out that I have forgotten to push the Procfile and requirements.txt file, and that’s why the error was coming up in my case. 

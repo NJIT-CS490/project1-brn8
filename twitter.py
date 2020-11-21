@@ -1,3 +1,13 @@
+# pylint: disable=trailing-whitespace
+# pylint: disable=line-too-long
+# pylint: disable=superfluous-parens
+# pylint: disable=too-many-locals
+# pylint: disable=no-else-return
+# pylint: disable=wrong-import-order
+# pylint: disable=missing-module-docstring
+# pylint: disable=invalid-envvar-default
+# pylint: disable=missing-function-docstring
+
 import flask
 import os
 import tweepy

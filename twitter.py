@@ -28,45 +28,47 @@ auth_api = tweepy.API(auth)
 
 @app.route('/') # Python decorator 
 def index():
-    list_item=["Samosas","Gulab Jamun","Gajar Ka Halwa","Falafel", "Lassi", "Cake","Ice Cream","Tomato Soup","Bagel"]
+    list_item=["sdfsdf","Samosas","Gulab Jamun","Gajar Ka Halwa","Falafel", "Lassi", "Cake","Ice Cream","Tomato Soup","Bagel"]
     keyword=random.choice(list_item)
     response = requests.get(
     "https://api.spoonacular.com/recipes/search?query=" + keyword +
     "&apiKey=" + spoonacular_key)
     json_body = response.json()
-    title=(json.dumps(json_body['results'][0]["title"], indent=2))
-    food_title=title.replace('"','')
-    item_id=(json.dumps(json_body['results'][0]["id"], indent=2))
-    serving=(json.dumps(json_body['results'][0]["servings"], indent=2))
-    prep_time=(json.dumps(json_body['results'][0]["readyInMinutes"], indent=2))
-    link=(json.dumps(json_body['results'][0]["sourceUrl"], indent=2))
-    food_link=link.replace('"','')
-    ingredients = requests.get(
-    "https://api.spoonacular.com/recipes/extract?url="+food_link+
-    "&apiKey=" + spoonacular_key)
-    lst=ingredients.json()
-    lst_ingredients=[]
-    for i in (lst["extendedIngredients"]):
-         lst_ingredients.append(i["original"])
-    tweets = auth_api.search(q=keyword, lang="en", tweet_mode='extended')
-    for tweet in tweets:
-        result=(tweet.full_text)
-        screen_name=(tweet.user.screen_name)
-        date_time=(tweet.created_at)
-    
-    return flask.render_template(
-        "index.html",
-        keyword=keyword,
-        result=result,
-        screen_name=screen_name,
-        date_time=date_time,
-        food_title=food_title,
-        item_id=item_id,
-        serving=serving,
-        prep_time=prep_time,
-        food_link=food_link,
-        len=len(lst_ingredients),
-        lst_ingredients=lst_ingredients
+    if json_body['results'] == []:
+        return flask.render_template("error.html")
+    else:
+        title=(json.dumps(json_body['results'][0]["title"], indent=2))
+        food_title=title.replace('"','')
+        item_id=(json.dumps(json_body['results'][0]["id"], indent=2))
+        serving=(json.dumps(json_body['results'][0]["servings"], indent=2))
+        prep_time=(json.dumps(json_body['results'][0]["readyInMinutes"], indent=2))
+        link=(json.dumps(json_body['results'][0]["sourceUrl"], indent=2))
+        food_link=link.replace('"','')
+        ingredients = requests.get(
+            "https://api.spoonacular.com/recipes/extract?url="+food_link+
+            "&apiKey=" + spoonacular_key)
+        lst=ingredients.json()
+        lst_ingredients=[]
+        for i in (lst["extendedIngredients"]):
+            lst_ingredients.append(i["original"])
+        tweets = auth_api.search(q=keyword, lang="en", tweet_mode='extended')
+        for tweet in tweets:
+            result=(tweet.full_text)
+            screen_name=(tweet.user.screen_name)
+            date_time=(tweet.created_at)
+        return flask.render_template(
+            "index.html",
+            keyword=keyword,
+            result=result,
+            screen_name=screen_name,
+            date_time=date_time,
+            food_title=food_title,
+            item_id=item_id,
+            serving=serving,
+            prep_time=prep_time,
+            food_link=food_link,
+            len=len(lst_ingredients),
+            lst_ingredients=lst_ingredients
         ) 
   
 app.run(
